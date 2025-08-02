@@ -12,11 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.SendG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Azure", "src\Providers\FluentComms.Providers.Azure\FluentComms.Providers.Azure.csproj", "{0EAFACD8-332A-4DF5-B4CE-CCD192AC1FE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Liquid", "src\Providers\FluentComms.Renderers.Liquid\FluentComms.Renderers.Liquid.csproj", "{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Liquid", "src\Renderers\FluentComms.Renderers.Liquid\FluentComms.Renderers.Liquid.csproj", "{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Razor", "src\Providers\FluentComms.Renderers.Razor\FluentComms.Renderers.Razor.csproj", "{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Razor", "src\Renderers\FluentComms.Renderers.Razor\FluentComms.Renderers.Razor.csproj", "{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Markdown", "src\Providers\FluentComms.Renderers.Markdown\FluentComms.Renderers.Markdown.csproj", "{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Markdown", "src\Renderers\FluentComms.Renderers.Markdown\FluentComms.Renderers.Markdown.csproj", "{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AF94BC20-1B80-4585-98C7-1116EA95CB3D}"
 EndProject
