@@ -1,7 +1,7 @@
-using Microsoft.Extensions.DependencyInjection;
 using FluentComms.Core.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace FluentComms.Providers.Liquid.Extensions
+namespace FluentComms.Renderers.Liquid.Extensions
 {
     public static class ServiceCollectionExtensions
     {

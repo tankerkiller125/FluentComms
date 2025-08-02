@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using FluentComms.Core.Interfaces;
-using FluentComms.Providers.SendGrid;
+using FluentComms.Renderers.SendGrid;
 using Moq;
 using Xunit;
 
-namespace FluentComms.Providers.SendGrid.Tests
+namespace FluentComms.Renderers.SendGrid.Tests
 {
     public class SendGridProviderTests
     {

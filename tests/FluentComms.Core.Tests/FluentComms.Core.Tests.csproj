@@ -27,8 +27,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\FluentComms.Core\FluentComms.Core.csproj" />
     <ProjectReference Include="..\..\src\Providers\FluentComms.Providers.SendGrid\FluentComms.Providers.SendGrid.csproj" />
-    <ProjectReference Include="..\..\src\Providers\FluentComms.Providers.Markdown\FluentComms.Providers.Markdown.csproj" />
-    <ProjectReference Include="..\..\src\Providers\FluentComms.Providers.Razor\FluentComms.Providers.Razor.csproj" />
+    <ProjectReference Include="..\..\src\Providers\FluentComms.Renderers.Markdown\FluentComms.Renderers.Markdown.csproj" />
+    <ProjectReference Include="..\..\src\Providers\FluentComms.Renderers.Razor\FluentComms.Renderers.Razor.csproj" />
   </ItemGroup>
 
 </Project>

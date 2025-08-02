@@ -4,7 +4,7 @@ using Azure.Communication.Sms;
 using FluentComms.Core.Interfaces;
 using FluentComms.Core.Models;
 
-namespace FluentComms.Providers.Azure
+namespace FluentComms.Renderers.Azure
 {
     public class AzureCommunicationServicesProvider : IProvider
     {

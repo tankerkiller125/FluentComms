@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using FluentComms.Core.Interfaces;
 
-namespace FluentComms.Providers.Razor.Extensions
+namespace FluentComms.Renderers.Razor.Extensions
 {
     public static class ServiceCollectionExtensions
     {

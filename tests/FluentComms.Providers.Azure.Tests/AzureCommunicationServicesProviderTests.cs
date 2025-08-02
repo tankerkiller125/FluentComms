@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using FluentComms.Core.Interfaces;
-using FluentComms.Providers.Azure;
+using FluentComms.Renderers.Azure;
 using Moq;
 using Xunit;
 
-namespace FluentComms.Providers.Azure.Tests
+namespace FluentComms.Renderers.Azure.Tests
 {
     public class AzureCommunicationServicesProviderTests
     {

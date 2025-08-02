@@ -3,7 +3,7 @@ using FluentComms.Core.Models;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
-namespace FluentComms.Providers.SendGrid
+namespace FluentComms.Renderers.SendGrid
 {
     public class SendGridProvider : IProvider
     {

@@ -12,11 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.SendG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Azure", "src\Providers\FluentComms.Providers.Azure\FluentComms.Providers.Azure.csproj", "{0EAFACD8-332A-4DF5-B4CE-CCD192AC1FE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Liquid", "src\Providers\FluentComms.Providers.Liquid\FluentComms.Providers.Liquid.csproj", "{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Liquid", "src\Providers\FluentComms.Renderers.Liquid\FluentComms.Renderers.Liquid.csproj", "{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Razor", "src\Providers\FluentComms.Providers.Razor\FluentComms.Providers.Razor.csproj", "{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Razor", "src\Providers\FluentComms.Renderers.Razor\FluentComms.Renderers.Razor.csproj", "{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Markdown", "src\Providers\FluentComms.Providers.Markdown\FluentComms.Providers.Markdown.csproj", "{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Renderers.Markdown", "src\Providers\FluentComms.Renderers.Markdown\FluentComms.Renderers.Markdown.csproj", "{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AF94BC20-1B80-4585-98C7-1116EA95CB3D}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.SendGrid.Tests", "tests\FluentComms.Providers.SendGrid.Tests\FluentComms.Providers.SendGrid.Tests.csproj", "{393A4BEC-A234-4D66-B2BA-D3AF01657160}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentComms.Providers.Azure.Tests", "tests\FluentComms.Providers.Azure.Tests\FluentComms.Providers.Azure.Tests.csproj", "{607C129E-2B8C-4F94-811C-7746341D74E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Renderers", "Renderers", "{EEF3836F-20CB-4FCE-80E6-196CB494F360}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,11 +79,12 @@ Global
 		{A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8} = {B29049C2-2640-400C-8AE3-9611660A0CA2}
 		{C60F83D5-A934-4B0E-B04D-8233CCB24496} = {A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8}
 		{0EAFACD8-332A-4DF5-B4CE-CCD192AC1FE4} = {A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8}
-		{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C} = {A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8}
-		{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D} = {A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8}
-		{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E} = {A05452A0-2E06-42D4-ACDB-F2B3ED4C86B8}
 		{A50A5F02-44C2-4872-97EC-9EDEB1009CCA} = {AF94BC20-1B80-4585-98C7-1116EA95CB3D}
 		{393A4BEC-A234-4D66-B2BA-D3AF01657160} = {AF94BC20-1B80-4585-98C7-1116EA95CB3D}
 		{607C129E-2B8C-4F94-811C-7746341D74E0} = {AF94BC20-1B80-4585-98C7-1116EA95CB3D}
+		{EEF3836F-20CB-4FCE-80E6-196CB494F360} = {B29049C2-2640-400C-8AE3-9611660A0CA2}
+		{9E3F2C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D} = {EEF3836F-20CB-4FCE-80E6-196CB494F360}
+		{7B8C9D0E-1F2A-3B4C-5D6E-7F8A9B0C1D2E} = {EEF3836F-20CB-4FCE-80E6-196CB494F360}
+		{8F2A1B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C} = {EEF3836F-20CB-4FCE-80E6-196CB494F360}
 	EndGlobalSection
 EndGlobal

@@ -1,19 +1,20 @@
-using System.Threading.Tasks;
 using Markdig;
-using FluentComms.Core.Interfaces;
 using FluentComms.Core.Templates;
 
-namespace FluentComms.Providers.Markdown
+namespace FluentComms.Renderers.Markdown
 {
     public class MarkdownTemplateProvider : BaseTemplateProvider
     {
         private readonly MarkdownPipeline _pipeline;
 
-        public MarkdownTemplateProvider()
+        public MarkdownTemplateProvider(Action<MarkdownPipelineBuilder>? configurePipeline = null)
         {
-            _pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .Build();
+            var builder = new MarkdownPipelineBuilder()
+                .UseAdvancedExtensions();
+
+            configurePipeline?.Invoke(builder);
+
+            _pipeline = builder.Build();
         }
 
         public override Task<string> RenderAsync(string template, object model)

@@ -3,7 +3,7 @@ using RazorLight;
 using FluentComms.Core.Interfaces;
 using FluentComms.Core.Templates;
 
-namespace FluentComms.Providers.Razor
+namespace FluentComms.Renderers.Razor
 {
     public class RazorTemplateProvider : BaseTemplateProvider
     {

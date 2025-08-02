@@ -1,8 +1,8 @@
 using FluentComms.Core.Interfaces;
-using FluentComms.Providers.Azure;
+using FluentComms.Renderers.Azure;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FluentComms.Providers.Azure.Extensions
+namespace FluentComms.Renderers.Azure.Extensions
 {
     public static class ServiceCollectionExtensions
     {

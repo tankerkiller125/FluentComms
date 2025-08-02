@@ -1,8 +1,8 @@
 using FluentComms.Core.Interfaces;
-using FluentComms.Providers.SendGrid;
+using FluentComms.Renderers.SendGrid;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FluentComms.Providers.SendGrid.Extensions
+namespace FluentComms.Renderers.SendGrid.Extensions
 {
     public static class ServiceCollectionExtensions
     {
