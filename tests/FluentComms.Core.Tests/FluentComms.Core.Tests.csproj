@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -26,9 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\FluentComms.Core\FluentComms.Core.csproj" />
-    <ProjectReference Include="..\..\src\Providers\FluentComms.Providers.SendGrid\FluentComms.Providers.SendGrid.csproj" />
-    <ProjectReference Include="..\..\src\Providers\FluentComms.Renderers.Markdown\FluentComms.Renderers.Markdown.csproj" />
-    <ProjectReference Include="..\..\src\Providers\FluentComms.Renderers.Razor\FluentComms.Renderers.Razor.csproj" />
   </ItemGroup>
 
 </Project>
