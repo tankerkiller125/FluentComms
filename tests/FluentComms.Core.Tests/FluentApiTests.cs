@@ -6,15 +6,57 @@ using FluentComms.Core.Configuration;
 using Moq;
 using Xunit;
 
+// Bring the root FluentComms namespace into scope
+using FluentComms;
+
 namespace FluentCommunications.Core.Tests
 {
     public class FluentApiTests
     {
         [Fact]
+        public void Email_FluentApi_BuildsCorrectEmail_RootNamespace()
+        {
+            // Act - Using the root FluentComms namespace
+            var emailBuilder = global::FluentComms.FluentComms.Email()
+                .From("john@email.com")
+                .To("bob@email.com", "bob")
+                .Subject("hows it going bob")
+                .Body("yo bob, long time no see!");
+
+            var email = emailBuilder.Build();
+
+            // Assert
+            Assert.NotNull(email.From);
+            Assert.Equal("john@email.com", email.From.Email);
+            Assert.Single(email.To);
+            Assert.Equal("bob@email.com", email.To[0].Email);
+            Assert.Equal("bob", email.To[0].Name);
+            Assert.Equal("hows it going bob", email.Subject);
+            Assert.Equal("yo bob, long time no see!", email.Body);
+        }
+
+        [Fact]
+        public void Sms_FluentApi_BuildsCorrectSms_RootNamespace()
+        {
+            // Act - Using the root FluentComms namespace
+            var smsBuilder = global::FluentComms.FluentComms.Sms()
+                .From("+15555554444")
+                .To("+15555552222")
+                .Body("yo bob, long time no see!");
+
+            var sms = smsBuilder.Build();
+
+            // Assert
+            Assert.Equal("+15555554444", sms.From);
+            Assert.Equal("+15555552222", sms.To);
+            Assert.Equal("yo bob, long time no see!", sms.Message);
+        }
+
+        [Fact]
         public void Email_FluentApi_BuildsCorrectEmail()
         {
-            // Act
-            var emailBuilder = FluentComms.Core.FluentComms.Email()
+            // Act - Using the FluentComms.Core.FluentCommunications class
+            var emailBuilder = FluentComms.Core.FluentCommunications.Email()
                 .From("john@email.com")
                 .To("bob@email.com", "bob")
                 .Subject("hows it going bob")
@@ -35,8 +77,8 @@ namespace FluentCommunications.Core.Tests
         [Fact]
         public void Sms_FluentApi_BuildsCorrectSms()
         {
-            // Act
-            var smsBuilder = FluentComms.Core.FluentComms.Sms()
+            // Act - Using the FluentComms.Core.FluentCommunications class
+            var smsBuilder = FluentComms.Core.FluentCommunications.Sms()
                 .From("+15555554444")
                 .To("+15555552222")
                 .Body("yo bob, long time no see!");
@@ -62,7 +104,7 @@ namespace FluentCommunications.Core.Tests
             try
             {
                 // Act
-                var result = await FluentComms.Core.FluentComms.Email()
+                var result = await global::FluentComms.FluentComms.Email()
                     .From("john@email.com")
                     .To("bob@email.com", "bob")
                     .Subject("hows it going bob")
@@ -88,12 +130,14 @@ namespace FluentCommunications.Core.Tests
             var expectedResult = new SenderResult { Successful = true };
             mockProvider.Setup(p => p.SendAsync(It.IsAny<IMessage>())).ReturnsAsync(expectedResult);
 
+            // Ensure clean state
+            FluentCommsConfiguration.DefaultSmsProvider = null;
             FluentCommsConfiguration.DefaultSmsProvider = mockProvider.Object;
 
             try
             {
                 // Act
-                var result = await FluentComms.Core.FluentComms.Sms()
+                var result = await global::FluentComms.FluentComms.Sms()
                     .From("+15555554444")
                     .To("+15555552222")
                     .Body("yo bob, long time no see!")
@@ -116,7 +160,7 @@ namespace FluentCommunications.Core.Tests
             // Arrange
             FluentCommsConfiguration.DefaultEmailProvider = null;
 
-            var emailBuilder = FluentComms.Core.FluentComms.Email()
+            var emailBuilder = global::FluentComms.FluentComms.Email()
                 .From("john@email.com")
                 .To("bob@email.com", "bob")
                 .Subject("hows it going bob")
@@ -133,7 +177,7 @@ namespace FluentCommunications.Core.Tests
             // Arrange
             FluentCommsConfiguration.DefaultSmsProvider = null;
 
-            var smsBuilder = FluentComms.Core.FluentComms.Sms()
+            var smsBuilder = global::FluentComms.FluentComms.Sms()
                 .From("+15555554444")
                 .To("+15555552222")
                 .Body("yo bob, long time no see!");

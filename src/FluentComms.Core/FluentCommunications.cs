@@ -15,18 +15,4 @@ namespace FluentComms.Core
             return new SmsBuilder();
         }
     }
-
-    // Shorter alias to match the problem statement examples
-    public static class FluentComms
-    {
-        public static EmailBuilder Email()
-        {
-            return new EmailBuilder();
-        }
-
-        public static SmsBuilder Sms()
-        {
-            return new SmsBuilder();
-        }
-    }
 }
