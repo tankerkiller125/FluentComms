@@ -16,6 +16,11 @@ namespace FluentComms.Core.Models
 
         public string? Body { get; set; }
 
+        public Email()
+        {
+            To = new List<IAddress>();
+        }
+
         // Fluent methods
         public Email SetFrom(IAddress from)
         {
@@ -79,6 +84,7 @@ namespace FluentComms.Core.Models
             return this;
         }
 
+        
         // Template support
         public async Task<Email> SetBodyFromTemplateAsync(ITemplateProvider templateProvider, string template, object model)
         {

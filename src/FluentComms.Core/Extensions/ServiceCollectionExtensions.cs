@@ -9,6 +9,7 @@ namespace FluentComms.Core.Extensions
         public static IServiceCollection AddFluentCommunicationsCore(this IServiceCollection services)
         {
             services.AddScoped<IChannel<IEmail>, EmailChannel>();
+            services.AddScoped<IChannel<ISms>, SmsChannel>();
             return services;
         }
     }
